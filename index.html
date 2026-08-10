@@ -488,6 +488,80 @@
     margin-top:4px;
   }
   @media (max-width:800px){ .training-grid{grid-template-columns:1fr;} }
+
+  /* ---------- EXPERIENCE ---------- */
+  .experience-list{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+  }
+  .exp-card{
+    background:var(--ink);
+    padding:32px 28px;
+    display:flex;
+    flex-direction:column;
+  }
+  .exp-card .idx{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    color:var(--signal);
+  }
+  .exp-card h3{
+    font-size:21px;
+    margin:16px 0 4px;
+  }
+  .exp-meta{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11.5px;
+    color:var(--paper-dim);
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+    margin-bottom:20px;
+    padding-bottom:18px;
+    border-bottom:1px solid var(--line);
+  }
+  .exp-points{
+    margin:0 0 22px;
+    padding:0;
+    list-style:none;
+    flex:1;
+  }
+  .exp-points li{
+    font-size:14px;
+    color:#d8d5cd;
+    margin-bottom:10px;
+    padding-left:16px;
+    position:relative;
+  }
+  .exp-points li::before{
+    content:"→";
+    position:absolute;
+    left:0;
+    color:var(--signal);
+  }
+  .exp-metrics{
+    border-top:1px solid var(--line);
+    padding-top:16px;
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+  }
+  .exp-metrics .num{
+    font-family:'Space Grotesk',sans-serif;
+    font-weight:700;
+    font-size:20px;
+    color:var(--signal);
+  }
+  .exp-metrics .lbl{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:10.5px;
+    color:var(--paper-dim);
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+  }
+  @media (max-width:800px){ .experience-list{grid-template-columns:1fr;} }
 </style>
 </head>
 <body>
@@ -497,8 +571,9 @@
     <div class="nav-name">JOÃO BRUFATTO</div>
     <div class="nav-links">
       <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#cases">Case Files</a>
+      <a href="#experience">Experience</a>
+      <a href="#services">What I Do</a>
+      <a href="#cases">Work</a>
       <a href="#training">Training</a>
       <a href="#contact">Contact</a>
     </div>
@@ -509,7 +584,7 @@
   <div class="wrap">
     <span class="eyebrow">Creative Strategist / Direct Response Copywriter</span>
     <h1>João<br>Brufatto</h1>
-    <p class="hero-role">I’m a creative strategist and direct-response copywriter focused on ads, offers, funnels, and campaigns. I’ve worked with creators, experts, and companies across Brazil, Latin America, Europe, and North America, mainly in SaaS, health & wellness, and business opportunities.</p>
+    <p class="hero-role">I'm a creative strategist and direct-response copywriter focused on <strong>ads, offers, funnels, and campaigns</strong>. I've worked with creators, experts, and companies across Brazil, Latin America, Europe, and North America, mainly across <strong>SaaS, health &amp; wellness, and business opportunities</strong>.</p>
     <div class="stat-row">
       <div class="stat">
         <div class="num">$11M+</div>
@@ -539,14 +614,74 @@
     </div>
     <div class="about-grid">
       <div class="reveal">
-        <p>For the past three years, I’ve worked as both a creative strategist and direct-response copywriter. Depending on the team and the project, that has meant researching audiences, developing offers, writing ads and scripts, analyzing performance, and turning what we learn into new creative directions.</p>
-        <p>I’ve worked across SaaS, health & wellness, and business opportunities, alongside creators, experts, and marketing teams across Brazil, Latin America, Europe, and North America.</p>
-        <p>I’m particularly interested in projects where there’s something to build — whether that means developing the positioning and offer for a new brand, finding the right creative angles, or building the systems and messaging that help a brand grow from its early stages.</p>
+        <p>For the past three years, I've worked as both a creative strategist and direct-response copywriter. Depending on the team and the project, that has meant researching audiences, developing offers, writing ads and scripts, analyzing performance, and turning what we learn into new creative directions.</p>
+        <p>I've worked across SaaS, health &amp; wellness, and business opportunities, alongside creators, experts, and marketing teams across Brazil, Latin America, Europe, and North America.</p>
+        <p>I'm particularly interested in projects where there's something to build — whether that means developing the positioning and offer for a new brand, finding the right creative angles, or building the systems and messaging that help a brand grow from its early stages.</p>
       </div>
       <div class="reveal">
-        <p class="pull">"Working across markets has also made me more conscious of the differences between audiences. What works in one market doesn’t automatically work in another — even when the product, offer, and language are the same."
-          <span class="tool">I like getting close to the problem before getting close to the copy.</span>
-        </p>
+        <p class="pull">"Give me a product or offer that isn't running yet, and I can help build the creative system around it."</p>
+        <p style="margin-top:28px;">Working across markets has also made me more conscious of the differences between audiences. What works in one market doesn't automatically work in another — even when the product, offer, and language are the same.</p>
+        <p>I like getting close to the problem before getting close to the copy.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience" class="tight">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">02 — Experience</span>
+      <h2>Companies, markets, and the work behind the numbers.</h2>
+    </div>
+    <div class="experience-list reveal">
+      <div class="exp-card">
+        <div class="idx">/ 01</div>
+        <h3>LA Agência</h3>
+        <div class="exp-meta">SaaS · Business Opportunity · Brazil</div>
+        <ul class="exp-points">
+          <li>Joined pre-launch, building from zero across multiple projects</li>
+          <li>Developed and wrote a SaaS offer from scratch (faith &amp; prayer vertical)</li>
+          <li>Built the creative strategy and wrote the ads that took it to market</li>
+          <li>Also worked on business-opportunity offers</li>
+        </ul>
+        <div class="exp-metrics">
+          <div class="num">$2M+</div>
+          <div class="lbl">Revenue over 10–12 months</div>
+        </div>
+      </div>
+      <div class="exp-card">
+        <div class="idx">/ 02</div>
+        <h3>Sky Hunter</h3>
+        <div class="exp-meta">Health &amp; Wellness · US / Europe</div>
+        <ul class="exp-points">
+          <li>ED / sexual health, cognitive health, weight loss, blood sugar, skincare</li>
+          <li>Direct-response copy and creative/performance work</li>
+          <li>Strongest results in ED and cognitive health / memory</li>
+          <li>Roughly 8 months on the team</li>
+        </ul>
+        <div class="exp-metrics">
+          <div class="num">$3M+</div>
+          <div class="lbl">Revenue generated</div>
+          <div class="num" style="margin-top:6px;">$38K</div>
+          <div class="lbl">Single-day revenue peak</div>
+        </div>
+      </div>
+      <div class="exp-card">
+        <div class="idx">/ 03</div>
+        <h3>Hydra</h3>
+        <div class="exp-meta">BizOp / MMO · Brazil / LatAm</div>
+        <ul class="exp-points">
+          <li>One of the largest BizOp/MMO companies in the region</li>
+          <li>Creative strategy across multiple offers, ads written for each</li>
+          <li>Built the early ad batches for two new offer launches</li>
+          <li>Developed significant funnel-analysis experience</li>
+        </ul>
+        <div class="exp-metrics">
+          <div class="num">$6M+</div>
+          <div class="lbl">Contributed revenue (multi-variant, ongoing attribution)</div>
+          <div class="num" style="margin-top:6px;">$75K</div>
+          <div class="lbl">Single-day ad spend, first batch</div>
+        </div>
       </div>
     </div>
   </div>
@@ -555,24 +690,24 @@
 <section id="services" class="tight">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="eyebrow">02 — Services</span>
-      <h2>Where I plug in.</h2>
+      <span class="eyebrow">03 — What I Do</span>
+      <h2>Where I can contribute.</h2>
     </div>
     <div class="service-list reveal">
       <div class="service-card">
         <div class="idx">/ 01</div>
-        <h3>Direct Response Copywriting</h3>
-        <p>Ads, hooks, VSL scripts and email built to move a specific person from skepticism to click — not just to sound good in a doc.</p>
+        <h3>Ads &amp; Direct Response Copy</h3>
+        <p>I write ads, hooks, scripts, and email with a focus on the offer, audience, and desired action — from initial concept through testing and iteration.</p>
       </div>
       <div class="service-card">
         <div class="idx">/ 02</div>
-        <h3>Creative Strategy</h3>
-        <p>Angle development, offer positioning, and directing experts/creators on what to say and feel on camera so the performance matches the strategy.</p>
+        <h3>Offers &amp; Creative Strategy</h3>
+        <p>I develop offers, positioning, angles, and creative concepts, and work with creators and experts to turn the strategy into ads that are clear, specific, and executable.</p>
       </div>
       <div class="service-card">
         <div class="idx">/ 03</div>
         <h3>Funnel Analysis &amp; Optimization</h3>
-        <p>Reading the data behind the creative — diagnosing why a funnel stopped converting, and rebuilding it with a fix grounded in evidence, not guesses.</p>
+        <p>I look at the relationship between the offer, creative, and funnel to identify where performance is breaking down — then use the available data to determine what to test next.</p>
       </div>
     </div>
   </div>
@@ -581,8 +716,29 @@
 <section id="cases" class="tight">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="eyebrow">03 — Case Files</span>
-      <h2>Selected work.</h2>
+      <span class="eyebrow">04 — Selected Work</span>
+      <h2>What the work actually looked like.</h2>
+    </div>
+
+    <div class="case reveal">
+      <div class="case-head">
+        <div>
+          <div class="case-tag">LA AGÊNCIA — SAAS / FAITH &amp; PRAYER</div>
+          <div class="case-title">Building a SaaS offer from zero to $2M+</div>
+        </div>
+        <div class="case-metric">
+          <div class="num">$2M+</div>
+          <div class="lbl">Revenue in 10–12 Months</div>
+        </div>
+      </div>
+      <div class="case-body">
+        <div class="k">Context</div>
+        <p class="v">Joined LA Agência when it was still being built from the ground up, working across several projects rather than sitting inside a single niche.</p>
+        <div class="k">Approach</div>
+        <p class="v">Developed and wrote the offer for a new SaaS product from scratch — a faith and prayer app — then built the creative strategy and wrote the ads that took it to market, iterating across multiple creatives rather than relying on any single one.</p>
+        <div class="k">Result</div>
+        <p class="v">The SaaS became the main driver of my work there, generating approximately $2M in revenue over roughly 10–12 months across multiple ads.</p>
+      </div>
     </div>
 
     <div class="case reveal">
@@ -673,7 +829,7 @@ So, do this: click the button below this video, and you'll earn at least another
 
         <div class="proof">
           <img src="proof-ad061-vsl.png" alt="Performance table showing AD061_H1_JB_DF with $349,860 total revenue, 182.93% ROAS, and $158,603.17 profit.">
-          <div class="proof-cap">Internal performance table (RedTrack) — AD061_H1_JB_DF, $349,860 total revenue · 182.93% ROAS</div>
+          <div class="proof-cap">Internal performance table — AD061_H1_JB_DF, $349,860 total revenue · 182.93% ROAS</div>
         </div>
 
         <div class="request-note">Full script available on request — send a message and I'll share it directly.</div>
@@ -732,7 +888,7 @@ So, do this: click the button below this video, and you'll earn at least another
 <section id="training" class="tight">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="eyebrow">04 — Influences &amp; Training</span>
+      <span class="eyebrow">05 — Influences &amp; Training</span>
       <h2>Who I learn from.</h2>
     </div>
     <div class="training-grid reveal">
@@ -776,7 +932,7 @@ So, do this: click the button below this video, and you'll earn at least another
 
 <footer id="contact">
   <div class="wrap">
-    <span class="eyebrow reveal">05 — Contact</span>
+    <span class="eyebrow reveal">06 — Contact</span>
     <h2 class="reveal">If you're a DTC brand looking for a strategist who thinks in angles and reads the data behind them — let's talk.</h2>
     <div class="contact-links reveal">
       <a href="mailto:joaonbru@gmail.com">
