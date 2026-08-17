@@ -1,0 +1,839 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="João Brufatto — Creative Strategist / Direct Response Copywriter.">
+<title>João Brufatto — Creative Strategist</title>
+<style>
+:root{
+  --bg:#0a0c0b;
+  --surface:#111412;
+  --surface2:#161a17;
+  --text:#f2f1ea;
+  --muted:#9ba39c;
+  --soft:#c9cec7;
+  --line:#2a302c;
+  --lime:#b6ff5f;
+  --lime2:#e4ffc7;
+  --max:1240px;
+  --serif:Georgia,"Times New Roman",serif;
+  --sans:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  color:var(--text);
+  background:
+    radial-gradient(circle at 82% 3%,rgba(182,255,95,.08),transparent 27rem),
+    radial-gradient(circle at 10% 32%,rgba(255,255,255,.025),transparent 25rem),
+    var(--bg);
+  font-family:var(--sans);
+  line-height:1.5;
+}
+body:before{
+  content:"";position:fixed;inset:0;pointer-events:none;opacity:.035;z-index:50;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+.wrap{width:min(calc(100% - 40px),var(--max));margin:0 auto}
+.eyebrow{font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--lime)}
+.kicker{font-size:12px;color:var(--muted);letter-spacing:.14em;text-transform:uppercase}
+.muted{color:var(--muted)}
+.nav{
+  position:sticky;top:0;z-index:40;
+  backdrop-filter:blur(18px);
+  background:rgba(10,12,11,.72);
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+.nav-inner{height:72px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:900;letter-spacing:-.05em;font-size:15px}
+.logo .dot{color:var(--lime)}
+.navlinks{display:flex;gap:26px;font-size:12px;color:#c3c8c2}
+.navlinks a:hover{color:var(--lime)}
+.navcta{border:1px solid var(--line);border-radius:999px;padding:10px 14px;font-size:12px;font-weight:800}
+.navcta:hover{border-color:var(--lime);color:var(--lime)}
+
+.hero{padding:110px 0 78px;min-height:720px;display:flex;align-items:center}
+.hero-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:72px;align-items:end}
+.hero h1{
+  margin:16px 0 26px;
+  font-size:clamp(66px,9.4vw,140px);
+  line-height:.84;
+  letter-spacing:-.085em;
+}
+.hero h1 em{font-family:var(--serif);font-weight:400;color:var(--lime2)}
+.hero-copy{font-size:clamp(18px,2vw,24px);line-height:1.32;color:#cfd3cd;max-width:720px}
+.hero-bottom{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.pill{border:1px solid var(--line);padding:9px 12px;border-radius:999px;color:#abb3ab;font-size:12px}
+.hero-proof{
+  border:1px solid var(--line);border-radius:18px;padding:30px;
+  background:linear-gradient(145deg,rgba(255,255,255,.05),rgba(255,255,255,.015));
+}
+.hero-proof .num{font-size:78px;font-weight:900;letter-spacing:-.08em;line-height:.9}
+.hero-proof .label{margin-top:11px;color:var(--muted);font-size:13px}
+.hero-proof .small{margin-top:25px;padding-top:18px;border-top:1px solid var(--line);font-size:12px;color:#89918a;line-height:1.5}
+
+.stats{border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:grid;grid-template-columns:repeat(4,1fr)}
+.stat{padding:23px;border-right:1px solid var(--line)}
+.stat:last-child{border-right:0}
+.stat strong{display:block;font-size:29px;letter-spacing:-.05em}
+.stat span{display:block;color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.13em;margin-top:5px}
+
+section{padding:110px 0}
+.section-head{display:grid;grid-template-columns:.55fr 1.45fr;gap:60px;margin-bottom:54px;align-items:end}
+.section-title{font-size:clamp(44px,6vw,76px);line-height:.92;letter-spacing:-.07em;margin:0}
+.section-lead{font-size:18px;line-height:1.42;color:#bcc3bd;max-width:660px;margin:0}
+.subtle-link{
+  display:inline-flex;align-items:center;gap:8px;margin-top:18px;
+  color:var(--lime);font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;
+  border-bottom:1px solid rgba(182,255,95,.35);padding-bottom:3px;
+}
+.subtle-link:hover{border-color:var(--lime)}
+
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.about-card{
+  border:1px solid var(--line);border-radius:18px;padding:28px;
+  background:rgba(255,255,255,.02);min-height:230px;
+}
+.about-card .tag{color:var(--lime);font-size:11px;font-weight:800;letter-spacing:.14em}
+.about-card h3{font-size:30px;line-height:1;letter-spacing:-.05em;margin:16px 0 10px}
+.about-card p{color:var(--muted);margin:0;max-width:520px}
+.about-card.big{grid-column:span 2;min-height:270px;display:flex;flex-direction:column;justify-content:flex-end}
+.about-card.big h3{font-size:clamp(40px,5vw,68px);max-width:850px}
+.about-card.big p{font-size:18px;line-height:1.4}
+
+.process-wrap{margin-top:10px}
+.process-row{
+  display:grid;grid-template-columns:80px 1fr 1fr;gap:28px;
+  padding:29px 0;border-top:1px solid var(--line);
+}
+.process-row:last-child{border-bottom:1px solid var(--line)}
+.process-no{font-family:var(--serif);font-size:25px;color:var(--lime)}
+.process-row h3{margin:0;font-size:24px;line-height:1.05;letter-spacing:-.04em}
+.process-row p{margin:0;color:var(--muted)}
+.process-row ul{margin:0;padding-left:18px;color:var(--muted);font-size:14px}
+.process-row li{margin:4px 0}
+
+.work-stack{display:grid;gap:22px}
+.case{
+  border:1px solid var(--line);border-radius:22px;
+  overflow:hidden;background:rgba(255,255,255,.02);
+}
+.case-top{padding:28px 30px 26px;display:grid;grid-template-columns:1.35fr .65fr;gap:28px}
+.case-kicker{font-size:11px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:var(--lime)}
+.case-title{font-size:clamp(32px,4vw,53px);line-height:.94;letter-spacing:-.065em;margin:8px 0 12px}
+.case-meta{font-size:13px;color:var(--muted)}
+.case-hero-number{text-align:right;align-self:end}
+.case-hero-number strong{display:block;font-size:58px;line-height:.88;letter-spacing:-.07em}
+.case-hero-number span{display:block;color:var(--muted);font-size:11px;margin-top:7px}
+
+.case-grid{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line)}
+.copy{padding:30px}
+.copy h4{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--lime);margin:0 0 9px}
+.copy p{color:#b6bdb6;margin:0 0 24px}
+.copy p:last-child{margin-bottom:0}
+
+.action-list{display:grid;gap:12px;margin:10px 0 25px}
+.action{
+  border:1px solid var(--line);border-radius:14px;padding:16px 18px;
+  display:grid;grid-template-columns:1fr auto;gap:16px;background:#0f1210;
+}
+.action h5{margin:0;font-size:15px;letter-spacing:-.02em}
+.action p{margin:4px 0 0;color:#858d85;font-size:12px}
+.action .metric{text-align:right;color:var(--lime);font-weight:900;font-size:16px;white-space:nowrap}
+
+.gallery{
+  border-left:1px solid var(--line);padding:24px;background:#0d100e;
+  display:grid;gap:16px;align-content:start;
+}
+.gallery-label{font-size:10px;letter-spacing:.15em;color:#6d756e;text-transform:uppercase}
+.evidence{border:1px solid #313631;border-radius:12px;overflow:hidden;background:#fff}
+.evidence-head{padding:12px 14px;background:#101412;color:#dce0db;display:flex;justify-content:space-between;align-items:center}
+.evidence-head strong{font-size:11px;letter-spacing:.11em;text-transform:uppercase}
+.evidence-head span{font-size:11px;color:#838c83}
+.evidence img{width:100%;height:auto;display:block}
+
+.two-cases{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.small-case .case-top{grid-template-columns:1fr}
+.small-case .case-hero-number{text-align:left;margin-top:18px}
+.small-case .case-grid{grid-template-columns:1fr}
+.small-case .gallery{border-left:0;border-top:1px solid var(--line)}
+
+.funnel{
+  border:1px solid var(--line);border-radius:18px;padding:20px;margin:22px 0 26px;background:#0e110f;
+}
+.funnel-question{font-family:var(--serif);font-size:28px;line-height:1.05;margin-bottom:15px;color:#e7eadf}
+.funnel-steps{display:flex;flex-wrap:wrap;gap:7px}
+.funnel-step{padding:8px 10px;border:1px solid #323933;border-radius:999px;font-size:11px;color:#b3bbb3}
+.funnel-step:last-child{color:var(--lime);border-color:rgba(182,255,95,.35)}
+
+.result-banner{
+  margin-top:22px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  padding:20px 0;display:flex;gap:26px;align-items:baseline;flex-wrap:wrap;
+}
+.result-banner strong{font-size:34px;letter-spacing:-.06em}
+.result-banner span{font-size:13px;color:var(--muted)}
+
+.scale-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.scale-card{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#0e110f}
+.scale-card .scale-meta{padding:14px 15px;display:flex;justify-content:space-between;align-items:end}
+.scale-card .scale-meta strong{font-size:22px;letter-spacing:-.04em}
+.scale-card .scale-meta span{font-size:10px;color:#7f8880;text-transform:uppercase;letter-spacing:.1em}
+.scale-card img{background:#fff}
+
+.mechanism{
+  margin-top:4px;padding:34px;border:1px solid var(--line);border-radius:20px;
+  background:
+    linear-gradient(140deg,rgba(182,255,95,.06),rgba(255,255,255,.01));
+}
+.mechanism-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-top:22px}
+.mechanism-step{padding:15px 10px;border:1px solid #343a35;border-radius:12px;font-size:11px;color:#afb7af;text-align:center}
+.mechanism-step b{display:block;color:#eff2ea;font-size:12px;margin-bottom:4px}
+
+.offer{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.offer-card{padding:30px 24px;border-right:1px solid var(--line)}
+.offer-card:last-child{border-right:0}
+.offer-card h3{font-size:24px;line-height:1;letter-spacing:-.045em;margin:0 0 10px}
+.offer-card p{margin:0;color:var(--muted);font-size:14px}
+
+.lab-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+.lab-card{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#0e100f;position:relative}
+.lab-card img{width:100%;height:100%;object-fit:cover}
+.lab-card.tall{grid-column:span 4;min-height:520px}
+.lab-card.square{grid-column:span 4;min-height:390px}
+.lab-card.saas{grid-column:span 4;min-height:390px}
+.lab-card.video{grid-column:span 8;min-height:360px;display:flex;flex-direction:column;justify-content:flex-end}
+.lab-card.docs{grid-column:span 4;min-height:360px;padding:24px}
+.lab-overlay{
+  position:absolute;left:14px;right:14px;top:14px;
+  display:flex;justify-content:space-between;align-items:center;gap:8px
+}
+.lab-label{background:rgba(9,12,10,.82);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.08);border-radius:999px;padding:7px 9px;font-size:9px;font-weight:900;letter-spacing:.13em;text-transform:uppercase}
+.lab-card.video{
+  background:
+    radial-gradient(circle at 35% 35%,rgba(182,255,95,.16),transparent 20rem),
+    linear-gradient(140deg,#151a16,#0b0d0c);
+}
+.video-inner{padding:27px}
+.video-inner .play{width:60px;height:60px;border-radius:50%;border:1px solid rgba(255,255,255,.18);display:grid;place-items:center;color:var(--lime);font-size:19px;margin-bottom:20px}
+.video-inner h3{font-size:36px;line-height:.95;letter-spacing:-.06em;margin:0 0 10px;max-width:620px}
+.video-inner p{color:var(--muted);margin:0 0 20px;max-width:580px}
+.external{
+  display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:999px;padding:10px 13px;font-size:11px;font-weight:900;letter-spacing:.08em;text-transform:uppercase
+}
+.external:hover{color:var(--lime);border-color:var(--lime)}
+.doc-list{display:grid;gap:10px;margin-top:14px}
+.doc{
+  padding:13px 0;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:14px;
+}
+.doc span{font-size:12px;color:#c8cdc8}
+.doc a{font-size:10px;color:var(--lime);font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+
+.experience{display:grid}
+.exp{display:grid;grid-template-columns:60px 1fr auto;gap:28px;padding:31px 0;border-top:1px solid var(--line)}
+.exp:last-child{border-bottom:1px solid var(--line)}
+.exp-no{font-size:11px;color:var(--lime);font-weight:900}
+.exp h3{margin:0 0 5px;font-size:28px;letter-spacing:-.05em}
+.exp-meta{font-size:12px;color:var(--muted);margin-bottom:12px}
+.exp ul{margin:0;padding-left:18px;color:#afb7af;font-size:14px}
+.exp li{margin:4px 0}
+.exp-metrics{text-align:right;min-width:150px}
+.exp-metrics strong{display:block;font-size:29px;letter-spacing:-.06em}
+.exp-metrics span{display:block;margin:2px 0 12px;color:#7e877f;font-size:9px;letter-spacing:.12em;text-transform:uppercase}
+
+.next{
+  border:1px solid var(--line);border-radius:20px;padding:40px;
+  background:linear-gradient(140deg,rgba(182,255,95,.06),rgba(255,255,255,.01));
+}
+.next h3{font-size:clamp(38px,5vw,66px);line-height:.92;letter-spacing:-.065em;margin:0 0 20px}
+.next p{font-size:18px;line-height:1.45;color:#b7beb7;max-width:760px;margin:0}
+.next .tagline{margin-top:26px;color:var(--lime);font-family:var(--serif);font-size:24px}
+
+.influences{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.influence{border:1px solid var(--line);border-radius:18px;padding:26px}
+.influence h3{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--lime);margin:0 0 16px}
+.influence p{margin:8px 0;color:#c0c7c0}
+
+.contact{padding:120px 0 82px;border-top:1px solid var(--line)}
+.contact h2{font-size:clamp(58px,9vw,132px);line-height:.83;letter-spacing:-.085em;margin:17px 0 28px}
+.contact h2 em{font-family:var(--serif);font-weight:400;color:var(--lime2)}
+.contact-copy{max-width:680px;color:#b6beb6;font-size:18px}
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:35px}
+.contact-item{border:1px solid var(--line);border-radius:15px;padding:17px 16px}
+.contact-item small{display:block;color:#768078;font-size:9px;font-weight:900;letter-spacing:.15em;text-transform:uppercase;margin-bottom:6px}
+.contact-item a{font-size:14px;color:#d8ddd7;word-break:break-word}
+.contact-item a:hover{color:var(--lime)}
+
+footer{border-top:1px solid var(--line);padding:22px 0 30px;color:#6f776f;font-size:11px;display:flex;justify-content:space-between}
+
+#articles{display:none}
+.admin-note{display:none}
+
+@media (max-width:980px){
+  .navlinks{display:none}
+  .hero{padding-top:75px}
+  .hero-grid,.section-head,.case-top,.case-grid,.two-cases{grid-template-columns:1fr}
+  .hero-proof{max-width:480px}
+  .case-hero-number{text-align:left}
+  .gallery{border-left:0;border-top:1px solid var(--line)}
+  .about-grid{grid-template-columns:1fr}
+  .about-card.big{grid-column:span 1}
+  .process-row{grid-template-columns:55px 1fr}
+  .process-row p,.process-row ul{grid-column:2}
+  .offer{grid-template-columns:1fr}
+  .offer-card{border-right:0;border-bottom:1px solid var(--line)}
+  .offer-card:last-child{border-bottom:0}
+  .lab-card.tall,.lab-card.square,.lab-card.saas,.lab-card.video,.lab-card.docs{grid-column:span 12;min-height:0}
+  .lab-card.tall,.lab-card.square,.lab-card.saas{max-height:none}
+  .exp{grid-template-columns:50px 1fr}
+  .exp-metrics{text-align:left;grid-column:2}
+}
+@media (max-width:620px){
+  .wrap{width:min(calc(100% - 28px),var(--max))}
+  .hero h1{font-size:59px}
+  .hero{padding-bottom:55px}
+  section{padding:78px 0}
+  .stats{grid-template-columns:1fr 1fr}
+  .stat{border-right:1px solid var(--line)}
+  .stat:nth-child(2){border-right:0}
+  .stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .stat:nth-child(3){border-bottom:0}
+  .stat:nth-child(4){border-right:0}
+  .about-card.big h3{font-size:40px}
+  .action{grid-template-columns:1fr}
+  .action .metric{text-align:left}
+  .scale-grid{grid-template-columns:1fr}
+  .mechanism-grid{grid-template-columns:1fr 1fr 1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .next{padding:25px}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap nav-inner">
+    <a class="logo" href="#top">JOÃO BRUFATTO<span class="dot">.</span></a>
+    <div class="navlinks">
+      <a href="#about">About</a>
+      <a href="#process">How I Work</a>
+      <a href="#work">Work</a>
+      <a href="#lab">Creative Lab</a>
+      <a href="#experience">Experience</a>
+    </div>
+    <a class="navcta" href="#contact">Let's talk ↗</a>
+  </div>
+</nav>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Creative Strategist · Direct Response</div>
+      <h1>Find the angle.<br><em>Prove it.</em><br>Scale it.</h1>
+      <p class="hero-copy">I turn customer research and performance data into creative strategy that gives brands a better chance of finding what works — and a system for doing it again.</p>
+      <div class="hero-bottom">
+        <span class="pill">Research-led</span>
+        <span class="pill">Performance-minded</span>
+        <span class="pill">Direct response background</span>
+      </div>
+    </div>
+    <aside class="hero-proof">
+      <div class="eyebrow">Peak single-day spend · one ad</div>
+      <div class="num">$75K</div>
+      <div class="label">A specific result from the first Hydra batch.</div>
+      <div class="small">Built from deeper audience research, new personas, proven formats, and creative iteration.</div>
+    </aside>
+  </div>
+</section>
+
+<div class="wrap stats">
+  <div class="stat"><strong>$11M+</strong><span>Revenue attributed</span></div>
+  <div class="stat"><strong>3 yrs</strong><span>Direct response</span></div>
+  <div class="stat"><strong>4</strong><span>BR · LatAm · EU · NA</span></div>
+  <div class="stat"><strong>$75K</strong><span>Single-day spend · one ad</span></div>
+</div>
+
+<section id="about">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">01 — About</div>
+      <p class="section-lead">A direct-response foundation, expanding into broader creative strategy.</p>
+    </div>
+    <div class="about-grid">
+      <article class="about-card big">
+        <div class="tag">THE CORE IDEA</div>
+        <h3>Get close to the problem before you get close to the copy.</h3>
+        <p>I've built creative systems from scratch across SaaS, e-commerce, and BizOp. Different markets behave differently. The job is to understand those differences before asking a creative idea to carry the weight.</p>
+      </article>
+      <article class="about-card">
+        <div class="tag">RESEARCH</div>
+        <h3>Listen before you write.</h3>
+        <p>Customer language, content habits, market beliefs, competitor positioning, and the signals people reveal when they think nobody is watching.</p>
+      </article>
+      <article class="about-card">
+        <div class="tag">STRATEGY</div>
+        <h3>Turn insight into angles.</h3>
+        <p>Personas, mechanisms, hooks, formats, offers, and creative directions that can become a batch — not just one “good idea.”</p>
+      </article>
+      <article class="about-card">
+        <div class="tag">ITERATION</div>
+        <h3>Let the results teach you.</h3>
+        <p>Winning creative becomes a new starting point. The goal isn't a lucky ad; it's a system that gets more accurate every cycle.</p>
+      </article>
+      <article class="about-card">
+        <div class="tag">NEXT MOVE</div>
+        <h3>Bring direct response into a bigger arena.</h3>
+        <p>After strong results with Brazilian companies selling internationally, I'm expanding toward larger global brands, e-commerce, and new markets — while keeping the discipline of direct response underneath the work.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">02 — How I Work</div>
+        <h2 class="section-title">Data-driven,<br>not assumption-driven.</h2>
+      </div>
+      <div>
+        <a class="subtle-link" href="#research">→ See the research process</a>
+      </div>
+    </div>
+    <div class="process-wrap">
+      <div class="process-row">
+        <div class="process-no">01</div>
+        <h3>Know the brand before the customer</h3>
+        <div><p>Best sellers, previous wins and losses, and whichever metric actually drives the business — CPA, EPC, AOV, or something else.</p></div>
+      </div>
+      <div class="process-row">
+        <div class="process-no">02</div>
+        <h3>Research like the customer, not about them</h3>
+        <div>
+          <p>What people consume for free is often the clearest map to what they'll pay for.</p>
+          <ul>
+            <li>Reddit, YouTube and TikTok comments</li>
+            <li>Books and niche-specific material</li>
+            <li>Custom prompts in Perplexity, Claude and Gemini</li>
+            <li>Competitor research + Adsparo, SimilarWeb and Semrush</li>
+          </ul>
+        </div>
+      </div>
+      <div class="process-row">
+        <div class="process-no">03</div>
+        <h3>Brief, write, then watch the batch land</h3>
+        <div><p>Usually 20–30 new concepts a week, tracked against the primary KPI, with CPM, hook rate, CPC and AOV as supporting signals.</p></div>
+      </div>
+      <div class="process-row">
+        <div class="process-no">04</div>
+        <h3>Feed the result back in</h3>
+        <div><p>What the last batch proved becomes the starting point for the next one. That's where strategy compounds.</p></div>
+      </div>
+    </div>
+    <div id="research" style="margin-top:18px;color:#6f776f;font-size:11px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap">
+      <span>Full research process page is structured into the site for later publication.</span>
+      <span class="kicker">/research — private for now</span>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">03 — Selected Work</div>
+      <div></div>
+    </div>
+
+    <div class="work-stack">
+
+      <article class="case">
+        <div class="case-top">
+          <div>
+            <div class="case-kicker">SaaS · Faith & Prayer</div>
+            <div class="case-title">When the ad is only part of the problem, fix the journey.</div>
+            <div class="case-meta">$60K/mo average ad spend · +$2M revenue in 12 months · LA Agency</div>
+          </div>
+          <div class="case-hero-number"><strong>2.1x</strong><span>winning creative ROAS</span></div>
+        </div>
+        <div class="case-grid">
+          <div class="copy">
+            <h4>Context</h4>
+            <p>A WhatsApp extension sending daily prayers on subscription — an idea I developed alongside the CEO, built and scaled together from day one. I owned the full creative strategy.</p>
+
+            <h4>Diagnosis</h4>
+            <p>Early ads weren't getting traction. CPM was high, CVR was low, and the account was spending roughly $20K/month at a 1.6–1.7 ROAS. The combination of underperforming creative and a low-converting landing page pointed to a broader funnel problem. There was significant room to optimize across the customer journey.</p>
+
+            <h4>Action</h4>
+            <div class="action-list">
+              <div class="action">
+                <div><h5>01 — Change the angle</h5><p>Back-and-forth format · “Hurry Prayer” angle</p></div>
+                <div class="metric">2.1 ROAS<br><span style="font-size:10px;color:#6f776f;font-weight:600">$27,134 spend</span></div>
+              </div>
+              <div class="action">
+                <div><h5>02 — Change the persona</h5><p>Demonstrative format · “Skeptical” persona</p></div>
+                <div class="metric">1.9 ROAS<br><span style="font-size:10px;color:#6f776f;font-weight:600">$15,342 spend</span></div>
+              </div>
+            </div>
+
+            <h4>Beyond the ads</h4>
+            <p>Sales-page optimization reduced drop-off and lifted CVR. Backend offers pushed LTV from $320 to $410. Subscription recovery and an affiliate referral loop added compounding growth.</p>
+
+            <h4>Result</h4>
+            <p>Scaled from $20K to $63K monthly ad spend, peaking at $100K in the best month. At departure, accumulated ad spend had reached $800K and the brand was still running.</p>
+          </div>
+
+          <div class="gallery">
+            <div class="gallery-label">Performance evidence</div>
+            <div class="evidence">
+              <div class="evidence-head"><strong>BEFORE</strong><span>creative + funnel underperforming</span></div>
+              <img src="assets/saas-roas-1-7.png" alt="SaaS performance dashboard showing 1.7 ROAS">
+            </div>
+            <div class="evidence">
+              <div class="evidence-head"><strong>AFTER</strong><span>better creatives + funnel optimization</span></div>
+              <img src="assets/saas-roas-2-1.png" alt="SaaS performance dashboard showing 2.1 ROAS">
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <div class="two-cases">
+
+        <article class="case small-case">
+          <div class="case-top">
+            <div>
+              <div class="case-kicker">Men's Health · VSL Optimization</div>
+              <div class="case-title">Find the leak before you write another ad.</div>
+              <div class="case-meta">Sky Hunter · affiliate funnel · US / Europe</div>
+            </div>
+            <div class="case-hero-number"><strong>0.7% → 1.7%</strong><span>CVR</span></div>
+          </div>
+          <div class="case-grid">
+            <div class="copy">
+              <h4>Context</h4>
+              <p>I had just joined Sky Hunter as the main copywriter. The men's-health affiliate funnel was a mess — poor VSL metrics, heavy traffic drop-off at the beginning of the video, and low CVR.</p>
+
+              <h4>Diagnosis</h4>
+              <p>I trace funnel leakage by asking one question: <strong>what part of the funnel do people actually see?</strong></p>
+              <div class="funnel">
+                <div class="funnel-question">Where does the customer stop?</div>
+                <div class="funnel-steps">
+                  <span class="funnel-step">Creative</span>
+                  <span class="funnel-step">Pre-sell</span>
+                  <span class="funnel-step">Sales Page</span>
+                  <span class="funnel-step">VSL</span>
+                </div>
+              </div>
+              <p>The ads were already strong and heavily tested. So instead of writing another ad, I looked at the next funnel step — and there was no pre-sell page in use.</p>
+
+              <h4>Action</h4>
+              <p>I rebuilt the sales page from a white-page VSL layout into an organic “online news” format. More people kept moving into the video.</p>
+              <p>Then came the bigger change: the <strong>micro-lead</strong> — a 1–5 minute piece before the VSL, designed like the hook of an ad, but for the VSL itself.</p>
+
+              <div class="result-banner"><strong>Pitch retention ↑</strong><span>CVR grew from 0.7% to 1.7% — the funnel became scalable again.</span></div>
+            </div>
+            <div class="gallery">
+              <div class="gallery-label">Conversion evidence</div>
+              <div class="evidence">
+                <div class="evidence-head"><strong>BEFORE → AFTER</strong><span>CVR lift</span></div>
+                <img src="assets/sky-cvr.png" alt="Sky Hunter dashboard showing 0.71 percent and 1.73 percent conversion rates">
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="case small-case">
+          <div class="case-top">
+            <div>
+              <div class="case-kicker">BizOp / MMO · Hydra</div>
+              <div class="case-title">Research did most of the writing.</div>
+              <div class="case-meta">$75K peak single-day spend · $1M+/mo at scale</div>
+            </div>
+            <div class="case-hero-number"><strong>$200K</strong><span>revenue in one day at peak</span></div>
+          </div>
+          <div class="case-grid">
+            <div class="copy">
+              <h4>Context</h4>
+              <p>Joined Hydra to launch two new offers after two existing funnels had run flat for 10 months.</p>
+
+              <h4>Action</h4>
+              <p>Deep-mapped the niche's existing audience — the YouTube channels, Instagram profiles, and Reddit communities they already followed — plus what hadn't worked in competing offers.</p>
+              <p>The first batch hit immediately, with one ad peaking at $75K in a single day. A second offer then exposed a deeper constraint: audience overlap with US competitors was pushing CPM up.</p>
+              <p>A new persona set, combined with proven formats and angles, unlocked another tier of scale.</p>
+
+              <h4>Result</h4>
+              <p>$88K in total ad spend in a single day, driving $200K in revenue that day alone, with the account running near $1M/month at peak.</p>
+
+              <div class="scale-grid">
+                <div class="scale-card">
+                  <div class="scale-meta"><strong>$75K</strong><span>one ad · one day</span></div>
+                  <img src="assets/hydra-75k-day.png" alt="Hydra performance showing 75K single-day spend">
+                </div>
+                <div class="scale-card">
+                  <div class="scale-meta"><strong>$88K</strong><span>single-day spend</span></div>
+                  <img src="assets/hydra-88k.png" alt="Hydra performance dashboard showing 88K spend">
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="mechanism">
+        <div class="eyebrow">Strategy / Mechanism Design</div>
+        <div class="section-title" style="font-size:clamp(38px,5vw,64px);margin-top:10px">Build the mechanism<br>before the script.</div>
+        <p style="max-width:760px;color:var(--muted);margin:16px 0 0">For men's-health offers, I map market beliefs and objections first, then build the “why this works” before writing the VSL. The result is a strategy document that can drive the script, offer structure, and lead angles.</p>
+        <div class="mechanism-grid">
+          <div class="mechanism-step"><b>01</b>Market</div>
+          <div class="mechanism-step"><b>02</b>Beliefs</div>
+          <div class="mechanism-step"><b>03</b>Problem</div>
+          <div class="mechanism-step"><b>04</b>Function</div>
+          <div class="mechanism-step"><b>05</b>Solution</div>
+          <div class="mechanism-step"><b>06</b>Offer / Big Idea</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="capabilities">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">04 — What I Can Do</div>
+      <div></div>
+    </div>
+    <div class="offer">
+      <div class="offer-card"><h3>Creative systems that scale</h3><p>Research, angles, personas, formats, and batches built to compound rather than depend on one-off hits.</p></div>
+      <div class="offer-card"><h3>Funnel analysis & optimization</h3><p>Find the step where the customer stops moving — then fix that step before spending more upstream.</p></div>
+      <div class="offer-card"><h3>Data analysis</h3><p>Turn performance into a tighter brief for the next batch, so the system gets smarter over time.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="lab">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">05 — Creative Lab</div>
+        <h2 class="section-title">Ideas are cheaper<br>when you can see them.</h2>
+      </div>
+      <p class="section-lead">A mix of concept work, adaptations, and creative direction. Spec pieces are marked clearly; the SaaS piece is an English adaptation of an offer I actually scaled.</p>
+    </div>
+
+    <div class="lab-grid">
+      <article class="lab-card tall">
+        <div class="lab-overlay"><span class="lab-label">Spec creative</span><span class="lab-label">Skincare</span></div>
+        <img src="assets/creative-spec-skincare.png" alt="Spec skincare creative showing before and after visual and product">
+      </article>
+
+      <article class="lab-card tall">
+        <div class="lab-overlay"><span class="lab-label">Spec creative</span><span class="lab-label">Men's health</span></div>
+        <img src="assets/creative-spec-mens-health.png" alt="Spec men's health creative with black and red product presentation">
+      </article>
+
+      <article class="lab-card tall">
+        <div class="lab-overlay"><span class="lab-label">SaaS adaptation</span><span class="lab-label">Faith & prayer</span></div>
+        <img src="assets/creative-saas-adaptation.jpg" alt="SaaS creative adaptation for SermonAI">
+      </article>
+
+      <article class="lab-card video">
+        <div class="lab-overlay"><span class="lab-label">Video creative</span><span class="lab-label">ED / VSL</span></div>
+        <div class="video-inner">
+          <div class="play">▶</div>
+          <h3>AD042H1_JB_ADV.mp4</h3>
+          <p>External video hosted on Google Drive. The site keeps the asset as a clean creative example without forcing a login or pretending the file is locally hosted.</p>
+          <a class="external" href="https://drive.google.com/file/d/14SVRh4sGY-utzkoYxpOr23B6Nr_W52sl/view?usp=drive_link" target="_blank" rel="noopener">Watch video ↗</a>
+        </div>
+      </article>
+
+      <article class="lab-card docs">
+        <div class="eyebrow">Writing samples</div>
+        <h3 style="font-size:30px;line-height:1;letter-spacing:-.05em;margin:10px 0 0">Scripts, ads,<br>and creative thinking.</h3>
+        <div class="doc-list">
+          <div class="doc"><span>$36K a day AD · Men's Health</span><a href="https://docs.google.com/document/d/10NrSTE2_T7lKXJFUkRAq4aD0_FegFBOv3KwQLdn2A_M/edit?tab=t.0/" target="_blank" rel="noopener">Open ↗</a></div>
+          <div class="doc"><span>$120K a day MMO AD</span><a href="https://docs.google.com/document/d/1jNuo6t56EMLatR0khrxy-UU1lPmX1dx-unZSdo7h2Uc/edit?tab=t.0" target="_blank" rel="noopener">Open ↗</a></div>
+          <div class="doc"><span>AD in Men's Health</span><a href="https://docs.google.com/document/d/1st975kubtpRs3FY1jIfkYgNRz4cVZHML_4w7SQKJaY4/edit?tab=t.0" target="_blank" rel="noopener">Open ↗</a></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">06 — Experience</div>
+        <h2 class="section-title">The work behind<br>the numbers.</h2>
+      </div>
+      <p class="section-lead">Direct response, DTC SaaS, health & wellness, and BizOp — plus the team leadership needed to turn strategy into production.</p>
+    </div>
+
+    <div class="experience">
+      <div class="exp">
+        <div class="exp-no">/ 01</div>
+        <div>
+          <h3>Cazina</h3>
+          <div class="exp-meta">Dropshipping · Founder · Brazil · 2021–2023</div>
+          <ul>
+            <li>Founded and ran the brand solo, buying media on TikTok and Meta.</li>
+            <li>Learned creative editing, funnel basics, and paid media hands-on.</li>
+            <li>Built the media-buying instinct behind the later case studies.</li>
+          </ul>
+        </div>
+        <div class="exp-metrics"><strong>$10K</strong><span>ad spend / month</span></div>
+      </div>
+
+      <div class="exp">
+        <div class="exp-no">/ 02</div>
+        <div>
+          <h3>LA Agência</h3>
+          <div class="exp-meta">DTC SaaS · Brazil</div>
+          <ul>
+            <li>Joined pre-launch and helped build a faith & prayer SaaS offer from zero.</li>
+            <li>Developed the creative strategy and wrote the ads that took it to market.</li>
+            <li>Worked closely with the CEO across creative, funnel, and growth decisions.</li>
+          </ul>
+        </div>
+        <div class="exp-metrics"><strong>$2M+</strong><span>revenue / 10–12 months</span></div>
+      </div>
+
+      <div class="exp">
+        <div class="exp-no">/ 03</div>
+        <div>
+          <h3>Sky Hunter</h3>
+          <div class="exp-meta">Health & Wellness · US / Europe</div>
+          <ul>
+            <li>ED / sexual health, cognitive health, weight loss, blood sugar, skincare.</li>
+            <li>Main copywriter on performance funnels and VSL work.</li>
+            <li>Led a team of <strong>2 editors</strong> alongside the creative/copy operation.</li>
+          </ul>
+        </div>
+        <div class="exp-metrics"><strong>$3M+</strong><span>revenue generated</span><strong>$38K</strong><span>single-day revenue peak</span></div>
+      </div>
+
+      <div class="exp">
+        <div class="exp-no">/ 04</div>
+        <div>
+          <h3>Hydra</h3>
+          <div class="exp-meta">BizOp / MMO · Brazil / LatAm</div>
+          <ul>
+            <li>Creative strategy across multiple offers and new launch batches.</li>
+            <li>Deep audience research, persona development, funnel analysis, and creative direction.</li>
+            <li>Led <strong>3 editors</strong> across creative production.</li>
+          </ul>
+        </div>
+        <div class="exp-metrics"><strong>$6M+</strong><span>contributed revenue</span><strong>$75K</strong><span>single-day ad spend</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="next">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">07 — What's Next</div>
+      <div></div>
+    </div>
+    <div class="next">
+      <h3>From direct response<br>into a bigger arena.</h3>
+      <p>I've spent most of my career in direct response and VSL-driven businesses, helping Brazilian companies sell into international markets. Now I'm looking to take that experience further — working with larger, global brands where I can contribute what direct response taught me while expanding into e-commerce, new markets, and broader creative strategy.</p>
+      <div class="tagline">Different market. Same obsession: finding what makes people act.</div>
+    </div>
+  </div>
+</section>
+
+<section id="influences">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">08 — Influences & Training</div>
+      <p class="section-lead">People and frameworks that shaped how I think about offers, markets, direct response, and creative strategy.</p>
+    </div>
+    <div class="influences">
+      <div class="influence">
+        <h3>People who shaped how I think</h3>
+        <p>Alen Sultanic — Offers & Positioning</p>
+        <p>Stefan Georgi — Direct Response Copy</p>
+        <p>Clayton Makepeace — Direct Response Copy</p>
+        <p>Parris Lampropoulos — Direct Response Copy</p>
+        <p>Luke Iha — Creative Strategy</p>
+      </div>
+      <div class="influence">
+        <h3>Training</h3>
+        <p>Workshop Big Offer & Formação Copy — Derick Carneiro</p>
+        <p>Imersão ADs Pro — Tiago Filemon</p>
+        <p>ADs 100x — Diogo Kobata</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FUTURE ARTICLES SECTION
+     Hidden by default so it does not appear on the live portfolio.
+     To publish later: change #articles { display:none; } to display:block.
+     Add articles to the array in the script at the bottom.
+-->
+<section id="articles">
+  <div class="wrap">
+    <div class="eyebrow">09 — Articles</div>
+    <h2 class="section-title" style="margin-top:10px">Notes from the work.</h2>
+    <div id="article-list" style="margin-top:30px"></div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="eyebrow">09 — Contact</div>
+    <h2>Let's build<br>something <em>that works.</em></h2>
+    <p class="contact-copy">Have a hard funnel problem, a creative system to build, or a global brand looking for a stronger performance mindset? Tell me what you're working on.</p>
+    <div class="contact-grid">
+      <div class="contact-item"><small>Email</small><a href="mailto:joaonbru@gmail.com">joaonbru@gmail.com</a></div>
+      <div class="contact-item"><small>LinkedIn</small><a href="https://www.linkedin.com/in/jo%C3%A3o-brufatto-58521629b" target="_blank" rel="noopener">linkedin.com/in/joão-brufatto-58521629b</a></div>
+      <div class="contact-item"><small>Phone / WhatsApp</small><a href="https://wa.me/5554996129925" target="_blank" rel="noopener">+55 54 99612-9925</a></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="wrap">
+  <span>© João Brufatto</span>
+  <span>Creative Strategy · Direct Response</span>
+</footer>
+
+<script>
+const articles = [
+  // Future article example:
+  // { title:"Why the funnel leak is rarely where you think", category:"Funnel Strategy", url:"#", date:"2026" }
+];
+
+const articleList = document.getElementById("article-list");
+if(articleList){
+  if(!articles.length){
+    articleList.innerHTML = '<p style="color:#737b73">No articles published yet.</p>';
+  } else {
+    articleList.innerHTML = articles.map(a => `
+      <article style="padding:20px 0;border-top:1px solid #2a302c;display:flex;justify-content:space-between;gap:20px">
+        <div><div style="font-size:10px;color:#b6ff5f;font-weight:800;letter-spacing:.12em;text-transform:uppercase">${a.category}</div>
+        <h3 style="margin:7px 0 0;font-size:24px">${a.title}</h3></div>
+        <a href="${a.url}" style="color:#b6ff5f;font-weight:800;font-size:11px">Read ↗</a>
+      </article>`).join("");
+  }
+}
+document.querySelectorAll('a[href^="#"]').forEach(link=>{
+  link.addEventListener("click", e=>{
+    const target=document.querySelector(link.getAttribute("href"));
+    if(target){e.preventDefault();window.scrollTo({top:target.offsetTop-78,behavior:"smooth"});}
+  });
+});
+</script>
+
+</body>
+</html>
